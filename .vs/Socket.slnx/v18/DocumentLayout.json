@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\C#\\Socket\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|D:\\C#\\Socket\\socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\cilent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\cilent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,25 +49,34 @@
               "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\C#\\Socket\\Socket\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Socket\\Form1.Designer.cs",
+              "ToolTip": "D:\\C#\\Socket\\Socket\\Form1.Designer.cs",
+              "RelativeToolTip": "Socket\\Form1.Designer.cs",
+              "ViewState": "AgIAAGQBAAAAAAAAAAAIwJYBAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T14:34:25.622Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Server.cs",
               "DocumentMoniker": "D:\\C#\\Socket\\Socket\\Server.cs",
               "RelativeDocumentMoniker": "Socket\\Server.cs",
               "ToolTip": "D:\\C#\\Socket\\Socket\\Server.cs",
               "RelativeToolTip": "Socket\\Server.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAqwEEAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAYwFAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-06T06:02:50.356Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Cilent.cs",
               "DocumentMoniker": "D:\\C#\\Socket\\Socket\\Cilent.cs",
               "RelativeDocumentMoniker": "Socket\\Cilent.cs",
@@ -72,6 +85,19 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-06T06:23:50.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\C#\\Socket\\Socket\\Form1.cs",
+              "RelativeDocumentMoniker": "Socket\\Form1.cs",
+              "ToolTip": "D:\\C#\\Socket\\Socket\\Form1.cs",
+              "RelativeToolTip": "Socket\\Form1.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAcwEoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T02:51:32.422Z",
               "EditorCaption": ""
             },
             {
@@ -85,19 +111,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-04T03:16:55.72Z",
               "EditorCaption": " [\u8BBE\u8BA1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\C#\\Socket\\Socket\\Form1.cs",
-              "RelativeDocumentMoniker": "Socket\\Form1.cs",
-              "ToolTip": "D:\\C#\\Socket\\Socket\\Form1.cs",
-              "RelativeToolTip": "Socket\\Form1.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAzwEgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T02:51:32.422Z",
-              "EditorCaption": ""
             }
           ]
         }

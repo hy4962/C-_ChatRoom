@@ -78,7 +78,7 @@ namespace ChatRoom
 
         }
 
-        public 
+       
 
 
     }   

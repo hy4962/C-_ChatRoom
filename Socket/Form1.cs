@@ -54,6 +54,11 @@ namespace ChatRoom
         private void btn_Connect_Click(object sender, EventArgs e)
         {
             cilent = new Cilent(tb_ServerIP.Text.Trim(), tb_ServerPort.Text.Trim());
+            if (cilent != null)
+            {
+                lb_Cilent.BadgeBack = Color.Green;
+                lb_Cilent.Badge = "True";
+            }
         }
 
         /// <summary>
@@ -64,6 +69,9 @@ namespace ChatRoom
         private void btn_CloseConnect_Click(object sender, EventArgs e)
         {
             cilent.Close();
+            lb_Cilent.BadgeBack = Color.Red;
+            lb_Cilent.Badge = "False";
+
         }
 
         private void btn_Send_Click(object sender, EventArgs e)
