@@ -5,12 +5,15 @@ namespace ChatRoom
     internal class Cilent
     {
         private Socket socket;
+        private ConnectionManager cm;
 
 
-        public Cilent(string ip_str, string port_str)
+
+        public Cilent(string ip_str, string port_str, ConnectionManager cm)
         {
             socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             socket.Connect(ip_str, int.Parse(port_str));
+            this.cm = cm;
         }
 
 

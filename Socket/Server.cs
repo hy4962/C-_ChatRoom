@@ -7,32 +7,44 @@ namespace ChatRoom
     {
 
         private Socket socket;
-
-
-        public Server(string ip_str, string port_str, int maxnum)
+        private ConnectionManager cm;
+        public Server(string ip_str, string port_str, int maxnum,ConnectionManager cm)
         {
+            // 创建一个TCP/IP套接字，AddressFamily.InterNetwork表示使用IPv4地址，SocketType.Stream表示使用流式套接字，ProtocolType.Tcp表示使用TCP协议
             socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
+            // 将IP地址和端口号转换为IPEndPoint对象，IPEndPoint表示一个网络端点，包括IP地址和端口号
             IPAddress ip = IPAddress.Parse(ip_str);
             int port = int.Parse(port_str);
 
-            socket.Bind(new IPEndPoint(ip, port));
 
-            socket.Listen(maxnum);
+            socket.Bind(new IPEndPoint(ip, port));// 绑定IP地址和端口号
+
+            socket.Listen(maxnum);// 开始监听，maxnum为最大连接数
+
+
+            this.cm = cm;
+            cm.ServerList.Add(ip_str, socket);// 将服务器连接添加到服务器列表中
         }
 
+        /// <summary>
+        /// 接收客户端连接，并使用KV存储
+        /// </summary>
         public void Accept()
         {
-            Socket client = socket.Accept();
+            Socket newclient = socket.Accept();// 接受一个新的客户端连接,并返回一个新的Socket对象用于与该客户端通信
+            string EndPoint = newclient.RemoteEndPoint.ToString(); // 获取客户端的IP地址和端口号作为标识
+
+            cm.ClientList.Add(EndPoint, newclient);// 将新的客户端连接添加到客户端列表中
+
         }
 
-        public void Close() { socket.Close(); }
 
-
-        public void Send(string message)
+        public void Send(string message,string ip)
         {
             byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
-            socket.Send(data);
+            Socket client = cm.ClientList[ip];// 从客户端列表中获取指定IP的客户端连接
+            client.Send(data);
         }
 
         public void SendToClient(Socket client, string message)

@@ -28,20 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            AntdUI.Tabs.StyleCard styleCard2 = new AntdUI.Tabs.StyleCard();
-            AntdUI.StepsItem stepsItem3 = new AntdUI.StepsItem();
-            AntdUI.StepsItem stepsItem4 = new AntdUI.StepsItem();
+            AntdUI.Tabs.StyleCard styleCard1 = new AntdUI.Tabs.StyleCard();
+            AntdUI.StepsItem stepsItem1 = new AntdUI.StepsItem();
+            AntdUI.StepsItem stepsItem2 = new AntdUI.StepsItem();
             pgh_pgh = new AntdUI.PageHeader();
             panel1 = new Panel();
             tabs1 = new AntdUI.Tabs();
             tb_Chat = new AntdUI.TabPage();
             splitter1 = new AntdUI.Splitter();
+            lsb_List = new ListBox();
+            panel3 = new Panel();
             btn_Send = new AntdUI.Button();
-            richTextBox1 = new RichTextBox();
-            tb_Guide = new AntdUI.TabPage();
-            steps1 = new AntdUI.Steps();
+            rtb_Message = new RichTextBox();
             tb_setting = new AntdUI.TabPage();
             divider1 = new AntdUI.Divider();
+            lb_s_o_c = new AntdUI.Label();
+            rbtn_Client = new RadioButton();
+            rbtn_Server = new RadioButton();
             btn_CloseSever = new AntdUI.ButtonShadow();
             btn_CloseConnect = new AntdUI.ButtonShadow();
             label5 = new AntdUI.Label();
@@ -58,19 +61,24 @@
             tb_ServerPort = new TextBox();
             tb_ServerIP = new TextBox();
             lb_ser = new AntdUI.Label();
+            tb_Guide = new AntdUI.TabPage();
+            steps1 = new AntdUI.Steps();
             panel2 = new Panel();
-            lb_状态栏 = new AntdUI.Label();
-            lb_Server = new AntdUI.Label();
             lb_Cilent = new AntdUI.Label();
+            lb_Server = new AntdUI.Label();
+            lb_状态栏 = new AntdUI.Label();
+            btn_Start = new AntdUI.Button();
             panel1.SuspendLayout();
             tabs1.SuspendLayout();
             tb_Chat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitter1).BeginInit();
+            splitter1.Panel1.SuspendLayout();
             splitter1.Panel2.SuspendLayout();
             splitter1.SuspendLayout();
-            tb_Guide.SuspendLayout();
+            panel3.SuspendLayout();
             tb_setting.SuspendLayout();
             divider1.SuspendLayout();
+            tb_Guide.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -98,8 +106,8 @@
             // tabs1
             // 
             tabs1.Centered = true;
-            tabs1.Controls.Add(tb_Chat);
             tabs1.Controls.Add(tb_setting);
+            tabs1.Controls.Add(tb_Chat);
             tabs1.Controls.Add(tb_Guide);
             tabs1.Dock = DockStyle.Fill;
             tabs1.Location = new Point(0, 44);
@@ -107,12 +115,12 @@
             tabs1.Pages.Add(tb_Guide);
             tabs1.Pages.Add(tb_Chat);
             tabs1.Pages.Add(tb_setting);
-            tabs1.SelectedIndex = 1;
+            tabs1.SelectedIndex = 2;
             tabs1.Size = new Size(1244, 632);
-            styleCard2.Border = 2;
-            styleCard2.BorderActive = SystemColors.ActiveBorder;
-            styleCard2.BorderColor = Color.AliceBlue;
-            tabs1.Style = styleCard2;
+            styleCard1.Border = 2;
+            styleCard1.BorderActive = SystemColors.ActiveBorder;
+            styleCard1.BorderColor = Color.AliceBlue;
+            tabs1.Style = styleCard1;
             tabs1.TabIndex = 3;
             tabs1.Text = "tabs1";
             tabs1.TextCenter = true;
@@ -121,7 +129,7 @@
             // tb_Chat
             // 
             tb_Chat.Controls.Add(splitter1);
-            tb_Chat.Location = new Point(0, 38);
+            tb_Chat.Location = new Point(-2488, -1188);
             tb_Chat.Name = "tb_Chat";
             tb_Chat.Size = new Size(1244, 594);
             tb_Chat.TabIndex = 1;
@@ -136,61 +144,56 @@
             // splitter1.Panel1
             // 
             splitter1.Panel1.BackColor = SystemColors.Control;
+            splitter1.Panel1.Controls.Add(lsb_List);
             // 
             // splitter1.Panel2
             // 
-            splitter1.Panel2.Controls.Add(btn_Send);
-            splitter1.Panel2.Controls.Add(richTextBox1);
+            splitter1.Panel2.Controls.Add(panel3);
+            splitter1.Panel2.Controls.Add(rtb_Message);
             splitter1.Size = new Size(1244, 594);
             splitter1.SplitterDistance = 258;
             splitter1.TabIndex = 0;
             // 
+            // lsb_List
+            // 
+            lsb_List.Dock = DockStyle.Fill;
+            lsb_List.FormattingEnabled = true;
+            lsb_List.Location = new Point(0, 0);
+            lsb_List.Name = "lsb_List";
+            lsb_List.Size = new Size(258, 594);
+            lsb_List.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(btn_Send);
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Location = new Point(0, 428);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(982, 41);
+            panel3.TabIndex = 2;
+            // 
             // btn_Send
             // 
-            btn_Send.Location = new Point(867, 460);
+            btn_Send.Location = new Point(858, 4);
             btn_Send.Name = "btn_Send";
             btn_Send.Size = new Size(112, 34);
             btn_Send.TabIndex = 1;
             btn_Send.Text = "Send";
             btn_Send.Click += btn_Send_Click;
             // 
-            // richTextBox1
+            // rtb_Message
             // 
-            richTextBox1.Dock = DockStyle.Bottom;
-            richTextBox1.Location = new Point(0, 469);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(982, 125);
-            richTextBox1.TabIndex = 0;
-            richTextBox1.Text = "";
-            // 
-            // tb_Guide
-            // 
-            tb_Guide.Controls.Add(steps1);
-            tb_Guide.Location = new Point(-2488, -1188);
-            tb_Guide.Name = "tb_Guide";
-            tb_Guide.Size = new Size(1244, 594);
-            tb_Guide.TabIndex = 0;
-            tb_Guide.Text = "引导";
-            // 
-            // steps1
-            // 
-            steps1.Dock = DockStyle.Fill;
-            stepsItem3.Name = "one";
-            stepsItem3.Title = "进入设置启用服务端/客户端";
-            stepsItem4.Name = "two";
-            stepsItem4.Title = "完成";
-            steps1.Items.Add(stepsItem3);
-            steps1.Items.Add(stepsItem4);
-            steps1.Location = new Point(0, 0);
-            steps1.Name = "steps1";
-            steps1.Size = new Size(1244, 594);
-            steps1.TabIndex = 4;
-            steps1.Text = "steps1";
+            rtb_Message.Dock = DockStyle.Bottom;
+            rtb_Message.Location = new Point(0, 469);
+            rtb_Message.Name = "rtb_Message";
+            rtb_Message.Size = new Size(982, 125);
+            rtb_Message.TabIndex = 0;
+            rtb_Message.Text = "";
             // 
             // tb_setting
             // 
             tb_setting.Controls.Add(divider1);
-            tb_setting.Location = new Point(-2488, -1188);
+            tb_setting.Location = new Point(0, 38);
             tb_setting.Name = "tb_setting";
             tb_setting.Size = new Size(1244, 594);
             tb_setting.TabIndex = 2;
@@ -198,6 +201,10 @@
             // 
             // divider1
             // 
+            divider1.Controls.Add(btn_Start);
+            divider1.Controls.Add(lb_s_o_c);
+            divider1.Controls.Add(rbtn_Client);
+            divider1.Controls.Add(rbtn_Server);
             divider1.Controls.Add(btn_CloseSever);
             divider1.Controls.Add(btn_CloseConnect);
             divider1.Controls.Add(label5);
@@ -222,6 +229,36 @@
             divider1.Text = "分割线";
             divider1.Vertical = true;
             // 
+            // lb_s_o_c
+            // 
+            lb_s_o_c.Location = new Point(563, 23);
+            lb_s_o_c.Name = "lb_s_o_c";
+            lb_s_o_c.Size = new Size(112, 34);
+            lb_s_o_c.TabIndex = 19;
+            lb_s_o_c.Text = "选择运行模式";
+            // 
+            // rbtn_Client
+            // 
+            rbtn_Client.AutoSize = true;
+            rbtn_Client.Location = new Point(576, 97);
+            rbtn_Client.Name = "rbtn_Client";
+            rbtn_Client.Size = new Size(85, 28);
+            rbtn_Client.TabIndex = 18;
+            rbtn_Client.Text = "Client";
+            rbtn_Client.UseVisualStyleBackColor = true;
+            // 
+            // rbtn_Server
+            // 
+            rbtn_Server.AutoSize = true;
+            rbtn_Server.Checked = true;
+            rbtn_Server.Location = new Point(576, 63);
+            rbtn_Server.Name = "rbtn_Server";
+            rbtn_Server.Size = new Size(88, 28);
+            rbtn_Server.TabIndex = 17;
+            rbtn_Server.TabStop = true;
+            rbtn_Server.Text = "Server";
+            rbtn_Server.UseVisualStyleBackColor = true;
+            // 
             // btn_CloseSever
             // 
             btn_CloseSever.Location = new Point(206, 378);
@@ -238,7 +275,6 @@
             btn_CloseConnect.Size = new Size(112, 34);
             btn_CloseConnect.TabIndex = 15;
             btn_CloseConnect.Text = "断开连接";
-            btn_CloseConnect.Click += btn_CloseConnect_Click;
             // 
             // label5
             // 
@@ -263,7 +299,6 @@
             btn_Connect.Size = new Size(112, 34);
             btn_Connect.TabIndex = 12;
             btn_Connect.Text = "连接服务器";
-            btn_Connect.Click += btn_Connect_Click;
             // 
             // tb_CilentPort
             // 
@@ -354,6 +389,30 @@
             lb_ser.TabIndex = 0;
             lb_ser.Text = "Sever";
             // 
+            // tb_Guide
+            // 
+            tb_Guide.Controls.Add(steps1);
+            tb_Guide.Location = new Point(-2488, -1188);
+            tb_Guide.Name = "tb_Guide";
+            tb_Guide.Size = new Size(1244, 594);
+            tb_Guide.TabIndex = 0;
+            tb_Guide.Text = "引导";
+            // 
+            // steps1
+            // 
+            steps1.Dock = DockStyle.Fill;
+            stepsItem1.Name = "one";
+            stepsItem1.Title = "进入设置启用服务端/客户端";
+            stepsItem2.Name = "two";
+            stepsItem2.Title = "完成";
+            steps1.Items.Add(stepsItem1);
+            steps1.Items.Add(stepsItem2);
+            steps1.Location = new Point(0, 0);
+            steps1.Name = "steps1";
+            steps1.Size = new Size(1244, 594);
+            steps1.TabIndex = 4;
+            steps1.Text = "steps1";
+            // 
             // panel2
             // 
             panel2.Controls.Add(lb_Cilent);
@@ -365,14 +424,17 @@
             panel2.Size = new Size(1244, 34);
             panel2.TabIndex = 4;
             // 
-            // lb_状态栏
+            // lb_Cilent
             // 
-            lb_状态栏.Dock = DockStyle.Left;
-            lb_状态栏.Location = new Point(0, 0);
-            lb_状态栏.Name = "lb_状态栏";
-            lb_状态栏.Size = new Size(84, 34);
-            lb_状态栏.TabIndex = 0;
-            lb_状态栏.Text = "  状态栏：";
+            lb_Cilent.Badge = "False";
+            lb_Cilent.BadgeAlign = AntdUI.TAlign.Right;
+            lb_Cilent.BadgeBack = Color.Red;
+            lb_Cilent.Dock = DockStyle.Left;
+            lb_Cilent.Location = new Point(176, 0);
+            lb_Cilent.Name = "lb_Cilent";
+            lb_Cilent.Size = new Size(92, 34);
+            lb_Cilent.TabIndex = 2;
+            lb_Cilent.Text = "客户端";
             // 
             // lb_Server
             // 
@@ -386,17 +448,23 @@
             lb_Server.TabIndex = 1;
             lb_Server.Text = "服务端";
             // 
-            // lb_Cilent
+            // lb_状态栏
             // 
-            lb_Cilent.Badge = "False";
-            lb_Cilent.BadgeAlign = AntdUI.TAlign.Right;
-            lb_Cilent.BadgeBack = Color.Red;
-            lb_Cilent.Dock = DockStyle.Left;
-            lb_Cilent.Location = new Point(176, 0);
-            lb_Cilent.Name = "lb_Cilent";
-            lb_Cilent.Size = new Size(92, 34);
-            lb_Cilent.TabIndex = 2;
-            lb_Cilent.Text = "客户端";
+            lb_状态栏.Dock = DockStyle.Left;
+            lb_状态栏.Location = new Point(0, 0);
+            lb_状态栏.Name = "lb_状态栏";
+            lb_状态栏.Size = new Size(84, 34);
+            lb_状态栏.TabIndex = 0;
+            lb_状态栏.Text = "  状态栏：";
+            // 
+            // btn_Start
+            // 
+            btn_Start.Location = new Point(563, 131);
+            btn_Start.Name = "btn_Start";
+            btn_Start.Size = new Size(112, 34);
+            btn_Start.TabIndex = 20;
+            btn_Start.Text = "Start";
+            btn_Start.Click += btn_Start_Click;
             // 
             // Form1
             // 
@@ -411,13 +479,15 @@
             panel1.ResumeLayout(false);
             tabs1.ResumeLayout(false);
             tb_Chat.ResumeLayout(false);
+            splitter1.Panel1.ResumeLayout(false);
             splitter1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitter1).EndInit();
             splitter1.ResumeLayout(false);
-            tb_Guide.ResumeLayout(false);
+            panel3.ResumeLayout(false);
             tb_setting.ResumeLayout(false);
             divider1.ResumeLayout(false);
             divider1.PerformLayout();
+            tb_Guide.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -451,10 +521,17 @@
         private AntdUI.Splitter splitter1;
         private AntdUI.ButtonShadow btn_CloseConnect;
         private AntdUI.Button btn_Send;
-        private RichTextBox richTextBox1;
+        private RichTextBox rtb_Message;
         private AntdUI.ButtonShadow btn_CloseSever;
         private Panel panel2;
         private AntdUI.Label lb_状态栏;
         private AntdUI.Label lb_Cilent;
+        private Panel panel3;
+        private AntdUI.Chat.ChatList chatList1;
+        private ListBox lsb_List;
+        private AntdUI.Label lb_s_o_c;
+        private RadioButton rbtn_Client;
+        private RadioButton rbtn_Server;
+        private AntdUI.Button btn_Start;
     }
 }
