@@ -19,14 +19,19 @@ namespace ChatRoom
             // 创建一个定时器
             System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer()
             { 
-                Interval = 100,// 设置定时器的时间间隔为100毫秒
+                Interval = 50,// 设置定时器的时间间隔为100毫秒
             };
             timer.Tick += UpdateClientList;// 定时器的Tick事件处理程序
-            
+            timer.Start();
         }
 
 
 
+
+        /// <summary>
+        /// 输入server/client来关闭对应的连接，关闭时会遍历对应的列表，调用每个Socket对象的Close方法来关闭连接，并清空列表
+        /// </summary>
+        /// <param name="name"></param>
         public void Close(string name) 
         {
             if(name == "server")
@@ -47,6 +52,13 @@ namespace ChatRoom
             }
         }
 
+
+
+        /// <summary>
+        /// 实时更新客户端列表里面的对象，把已断开的对象删掉
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UpdateClientList(object sender, EventArgs e)
         {
             Task.Run(() => 

@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\C#\\Socket\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,6 +43,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Bookmark",
@@ -61,10 +65,6 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [\u8BBE\u8BA1]",
@@ -75,32 +75,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-07T07:18:29.502Z",
               "EditorCaption": " [\u8BBE\u8BA1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ConnectionManager.cs",
-              "DocumentMoniker": "D:\\C#\\Socket\\Socket\\ConnectionManager.cs",
-              "RelativeDocumentMoniker": "Socket\\ConnectionManager.cs",
-              "ToolTip": "D:\\C#\\Socket\\Socket\\ConnectionManager.cs",
-              "RelativeToolTip": "Socket\\ConnectionManager.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAADIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T06:42:06.283Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\C#\\Socket\\Socket\\Form1.cs",
-              "RelativeDocumentMoniker": "Socket\\Form1.cs",
-              "ToolTip": "D:\\C#\\Socket\\Socket\\Form1.cs",
-              "RelativeToolTip": "Socket\\Form1.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAqwFsAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T02:51:32.422Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -125,6 +99,32 @@
               "ViewState": "AgIAAA0AAAAAAAAAAAAAwCYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-07T06:48:26.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConnectionManager.cs",
+              "DocumentMoniker": "D:\\C#\\Socket\\Socket\\ConnectionManager.cs",
+              "RelativeDocumentMoniker": "Socket\\ConnectionManager.cs",
+              "ToolTip": "D:\\C#\\Socket\\Socket\\ConnectionManager.cs",
+              "RelativeToolTip": "Socket\\ConnectionManager.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T06:42:06.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\C#\\Socket\\Socket\\Form1.cs",
+              "RelativeDocumentMoniker": "Socket\\Form1.cs",
+              "ToolTip": "D:\\C#\\Socket\\Socket\\Form1.cs",
+              "RelativeToolTip": "Socket\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T02:51:32.422Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
