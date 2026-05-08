@@ -81,18 +81,22 @@ namespace ChatRoom
         {
             Task.Run(new Action(() =>
             {
-                if (Chat.IsServerRunning)
+                if (Chat.IsServerRunning)// 只有当服务器正在运行时才更新客户端列表
                 {
-                    if (cm.ClientList.Count > 0)
+                    if (cm.ClientList.Count > 0)// 只有当客户端列表中有连接时才更新listbox
                     {
+                        // 使用Invoke方法在UI线程上更新listbox，确保线程安全
                         lsb_List.Invoke(new Action(() =>
                         {
+                            object SelectedItem = lsb_List.SelectedItem;// 记录当前选中的项，以便更新后重新选中
                             lsb_List.Items.Clear();
                             foreach (var item in cm.ClientList)
                             {
                                 lsb_List.Items.Add(item.Key);
                             }
+                            lsb_List.SelectedItem = SelectedItem;// 更新后重新选中之前选中的项
                         }));
+
                     }
                 }
             }));

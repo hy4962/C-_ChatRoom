@@ -17,3 +17,4 @@ D:\C#\Socket\Socket\obj\Debug\net10.0-windows\refint\ChatRoom.dll
 D:\C#\Socket\Socket\obj\Debug\net10.0-windows\ChatRoom.pdb
 D:\C#\Socket\Socket\obj\Debug\net10.0-windows\ChatRoom.genruntimeconfig.cache
 D:\C#\Socket\Socket\obj\Debug\net10.0-windows\ref\ChatRoom.dll
+D:\C#\Socket\Socket\obj\Debug\net10.0-windows\ChatRoom.sourcelink.json
