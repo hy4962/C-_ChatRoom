@@ -36,7 +36,7 @@ namespace ChatRoom
             string EndPoint = newclient.RemoteEndPoint.ToString(); // 获取客户端的IP地址和端口号作为标识
 
             cm.ClientList.Add(EndPoint, newclient);// 将新的客户端连接添加到客户端列表中
-
+            
         }
 
 

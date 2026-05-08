@@ -23,23 +23,7 @@ namespace ChatRoom
 
         private void btn_Start_Click(object sender, EventArgs e)
         {
-            Task.Run(new Action(() =>
-            {
-                while (true)
-                {
-                    if (rbtn_Server.Checked)
-                    {
-                        if (cm.ClientList.Count > 0)
-                        {
-                            Invoke(new Action(() =>
-                            {
-                                lsb_List.Items.Add(cm.ClientList.Keys.Last());// 将最新连接的客户端添加到列表框中显示
-                            }));
-                        }
-                    }
-                }
-            }));
-
+            time_listbox.Start();
         }
 
 
@@ -56,6 +40,12 @@ namespace ChatRoom
             lb_Server.Badge = "True";
         }
 
+
+        /// <summary>
+        /// 关闭服务
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_CloseSever_Click(object sender, EventArgs e)
         {
             Chat.CloseServer();
@@ -65,15 +55,51 @@ namespace ChatRoom
 
 
 
+        /// <summary>
+        /// 发送数据
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Send_Click(object sender, EventArgs e)
         {
             if (Chat.IsServerRunning)
             {
-                Chat.Send(rtb_Message.Text.Trim(),lsb_List.SelectedItem.ToString());
+                Chat.Send(rtb_Message.Text.Trim(), lsb_List.SelectedItem.ToString());
                 rtb_Message.Text = null;
             }
 
         }
+
+
+
+        /// <summary>
+        /// 实时更新listbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void time_listbox_Tick(object sender, EventArgs e)
+        {
+            Task.Run(new Action(() =>
+            {
+                if (Chat.IsServerRunning)
+                {
+                    if (cm.ClientList.Count > 0)
+                    {
+                        lsb_List.Invoke(new Action(() =>
+                        {
+                            lsb_List.Items.Clear();
+                            foreach (var item in cm.ClientList)
+                            {
+                                lsb_List.Items.Add(item.Key);
+                            }
+                        }));
+                    }
+                }
+            }));
+        }
+
+
+
 
 
     }
