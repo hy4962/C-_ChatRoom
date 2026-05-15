@@ -1,3 +1,4 @@
+using AntdUI;
 using System.Net;
 using System.Net.Sockets;
 
@@ -71,6 +72,37 @@ namespace ChatRoom
         }
 
 
+        private void UpdateMessage(string s)
+        {
+            if (s == "my")
+            {
+                AntdUI.Panel panel = new AntdUI.Panel()
+                {
+                    Top = 50,
+                    Left = 50,
+                };
+                AntdUI.Label label = new AntdUI.Label()
+                {
+                    Text = "这是我的消息",
+                    Top = 10,
+                    Left = 10,
+                };
+
+                
+                splitter1.Panel2.Controls.Add(panel);
+
+            }
+            if (s == "other")
+            {
+
+            }
+
+
+        }
+
+
+
+
 
         /// <summary>
         /// 实时更新listbox
@@ -102,9 +134,9 @@ namespace ChatRoom
             }));
         }
 
-
-
-
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UpdateMessage("my");
+        }
     }
 }

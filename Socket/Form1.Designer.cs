@@ -41,6 +41,8 @@
             panel3 = new Panel();
             btn_Send = new AntdUI.Button();
             rtb_Message = new RichTextBox();
+            tb_Guide = new AntdUI.TabPage();
+            steps1 = new AntdUI.Steps();
             tb_setting = new AntdUI.TabPage();
             divider1 = new AntdUI.Divider();
             btn_Start = new AntdUI.Button();
@@ -63,13 +65,12 @@
             tb_ServerPort = new TextBox();
             tb_ServerIP = new TextBox();
             lb_ser = new AntdUI.Label();
-            tb_Guide = new AntdUI.TabPage();
-            steps1 = new AntdUI.Steps();
             panel2 = new Panel();
             lb_Cilent = new AntdUI.Label();
             lb_Server = new AntdUI.Label();
             lb_状态栏 = new AntdUI.Label();
             time_listbox = new System.Windows.Forms.Timer(components);
+            button1 = new Button();
             panel1.SuspendLayout();
             tabs1.SuspendLayout();
             tb_Chat.SuspendLayout();
@@ -78,9 +79,9 @@
             splitter1.Panel2.SuspendLayout();
             splitter1.SuspendLayout();
             panel3.SuspendLayout();
+            tb_Guide.SuspendLayout();
             tb_setting.SuspendLayout();
             divider1.SuspendLayout();
-            tb_Guide.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -108,16 +109,16 @@
             // tabs1
             // 
             tabs1.Centered = true;
-            tabs1.Controls.Add(tb_setting);
             tabs1.Controls.Add(tb_Chat);
             tabs1.Controls.Add(tb_Guide);
+            tabs1.Controls.Add(tb_setting);
             tabs1.Dock = DockStyle.Fill;
             tabs1.Location = new Point(0, 44);
             tabs1.Name = "tabs1";
             tabs1.Pages.Add(tb_Guide);
             tabs1.Pages.Add(tb_Chat);
             tabs1.Pages.Add(tb_setting);
-            tabs1.SelectedIndex = 2;
+            tabs1.SelectedIndex = 1;
             tabs1.Size = new Size(1244, 632);
             styleCard1.Border = 2;
             styleCard1.BorderActive = SystemColors.ActiveBorder;
@@ -131,7 +132,7 @@
             // tb_Chat
             // 
             tb_Chat.Controls.Add(splitter1);
-            tb_Chat.Location = new Point(-2488, -1188);
+            tb_Chat.Location = new Point(0, 38);
             tb_Chat.Name = "tb_Chat";
             tb_Chat.Size = new Size(1244, 594);
             tb_Chat.TabIndex = 1;
@@ -167,6 +168,7 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(button1);
             panel3.Controls.Add(btn_Send);
             panel3.Dock = DockStyle.Bottom;
             panel3.Location = new Point(0, 428);
@@ -192,10 +194,34 @@
             rtb_Message.TabIndex = 0;
             rtb_Message.Text = "";
             // 
+            // tb_Guide
+            // 
+            tb_Guide.Controls.Add(steps1);
+            tb_Guide.Location = new Point(-2488, -1188);
+            tb_Guide.Name = "tb_Guide";
+            tb_Guide.Size = new Size(1244, 594);
+            tb_Guide.TabIndex = 0;
+            tb_Guide.Text = "引导";
+            // 
+            // steps1
+            // 
+            steps1.Dock = DockStyle.Fill;
+            stepsItem1.Name = "one";
+            stepsItem1.Title = "进入设置启用服务端/客户端";
+            stepsItem2.Name = "two";
+            stepsItem2.Title = "完成";
+            steps1.Items.Add(stepsItem1);
+            steps1.Items.Add(stepsItem2);
+            steps1.Location = new Point(0, 0);
+            steps1.Name = "steps1";
+            steps1.Size = new Size(1244, 594);
+            steps1.TabIndex = 4;
+            steps1.Text = "steps1";
+            // 
             // tb_setting
             // 
             tb_setting.Controls.Add(divider1);
-            tb_setting.Location = new Point(0, 38);
+            tb_setting.Location = new Point(-2488, -1188);
             tb_setting.Name = "tb_setting";
             tb_setting.Size = new Size(1244, 594);
             tb_setting.TabIndex = 2;
@@ -400,30 +426,6 @@
             lb_ser.TabIndex = 0;
             lb_ser.Text = "Sever";
             // 
-            // tb_Guide
-            // 
-            tb_Guide.Controls.Add(steps1);
-            tb_Guide.Location = new Point(-2488, -1188);
-            tb_Guide.Name = "tb_Guide";
-            tb_Guide.Size = new Size(1244, 594);
-            tb_Guide.TabIndex = 0;
-            tb_Guide.Text = "引导";
-            // 
-            // steps1
-            // 
-            steps1.Dock = DockStyle.Fill;
-            stepsItem1.Name = "one";
-            stepsItem1.Title = "进入设置启用服务端/客户端";
-            stepsItem2.Name = "two";
-            stepsItem2.Title = "完成";
-            steps1.Items.Add(stepsItem1);
-            steps1.Items.Add(stepsItem2);
-            steps1.Location = new Point(0, 0);
-            steps1.Name = "steps1";
-            steps1.Size = new Size(1244, 594);
-            steps1.TabIndex = 4;
-            steps1.Text = "steps1";
-            // 
             // panel2
             // 
             panel2.Controls.Add(lb_Cilent);
@@ -473,6 +475,16 @@
             time_listbox.Interval = 50;
             time_listbox.Tick += time_listbox_Tick;
             // 
+            // button1
+            // 
+            button1.Location = new Point(730, 1);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 34);
+            button1.TabIndex = 2;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
@@ -491,10 +503,10 @@
             ((System.ComponentModel.ISupportInitialize)splitter1).EndInit();
             splitter1.ResumeLayout(false);
             panel3.ResumeLayout(false);
+            tb_Guide.ResumeLayout(false);
             tb_setting.ResumeLayout(false);
             divider1.ResumeLayout(false);
             divider1.PerformLayout();
-            tb_Guide.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -541,5 +553,6 @@
         private RadioButton rbtn_Server;
         private AntdUI.Button btn_Start;
         private System.Windows.Forms.Timer time_listbox;
+        private Button button1;
     }
 }

@@ -56,7 +56,15 @@
             }
         }
 
+        /// <summary>
+        /// 接收消息
+        /// </summary>
+        public void ReceiveMessage() 
+        {
+            
 
+
+        }
 
 
 
