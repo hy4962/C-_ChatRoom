@@ -18,7 +18,8 @@ namespace ChatRoom
 
             Chat.OnMessageReceived += (endpoint, msg) =>
             {
-                this.Invoke(() => UpdateMessage(endpoint, msg));
+                this.Invoke(() => CreateMessage(endpoint, msg));
+                Invoke(() => UpdateMessage(endpoint, msg));
             };
 
         }
@@ -119,5 +120,40 @@ namespace ChatRoom
         {
             
         }
+
+        private void CreateMessage(string endpoint, string msg)
+        {
+            
+            AntdUI.Panel panel = new AntdUI.Panel()
+            {
+                Left = 50,Top = 50,
+            };
+            Avatar avatar = new Avatar()
+            {
+                ImageSvg = "UserOutlined",
+                Width = 30, Height = 30,
+                Left = 0, Top = 0,
+            };
+            AntdUI.Label lb_endpoint = new AntdUI.Label()
+            {
+                Text = endpoint,
+                Left = 40,
+                Top = 0,
+            };
+            AntdUI.Label lb_msg = new AntdUI.Label()
+            {
+                Text = msg,
+                Left = 40,
+                Top = 20,
+            };
+
+            splitter1.Panel2.Controls.Add(panel);
+            panel.Controls.Add(avatar);
+            panel.Controls.Add(lb_endpoint);
+            panel.Controls.Add(lb_msg);
+
+        }
+
+
     }
 }

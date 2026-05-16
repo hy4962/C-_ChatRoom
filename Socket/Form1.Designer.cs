@@ -39,6 +39,7 @@
             splitter1 = new AntdUI.Splitter();
             lsb_List = new ListBox();
             panel3 = new Panel();
+            button1 = new Button();
             btn_Send = new AntdUI.Button();
             rtb_Message = new RichTextBox();
             tb_Guide = new AntdUI.TabPage();
@@ -70,7 +71,6 @@
             lb_Server = new AntdUI.Label();
             lb_状态栏 = new AntdUI.Label();
             time_listbox = new System.Windows.Forms.Timer(components);
-            button1 = new Button();
             panel1.SuspendLayout();
             tabs1.SuspendLayout();
             tb_Chat.SuspendLayout();
@@ -175,6 +175,16 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(982, 41);
             panel3.TabIndex = 2;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(730, 1);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 34);
+            button1.TabIndex = 2;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // btn_Send
             // 
@@ -474,16 +484,6 @@
             // 
             time_listbox.Interval = 50;
             time_listbox.Tick += time_listbox_Tick;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(730, 1);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 2;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // Form1
             // 
