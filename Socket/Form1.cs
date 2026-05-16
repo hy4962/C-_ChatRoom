@@ -1,4 +1,5 @@
 using AntdUI;
+using AntdUI.Chat;
 using System.Net;
 using System.Net.Sockets;
 
@@ -18,17 +19,9 @@ namespace ChatRoom
 
             Chat.OnMessageReceived += (endpoint, msg) =>
             {
-                this.Invoke(() => CreateMessage(endpoint, msg));
-                Invoke(() => UpdateMessage(endpoint, msg));
+                this.Invoke(() => UpdateMessage(endpoint, msg,false));
             };
 
-        }
-
-
-
-        private void btn_Start_Click(object sender, EventArgs e)
-        {
-            time_listbox.Start();
         }
 
 
@@ -43,6 +36,8 @@ namespace ChatRoom
             Chat.CreateServer(tb_ServerIP.Text.Trim(), tb_ServerPort.Text.Trim(), int.Parse(tb_MaxNum.Text.Trim()));
             lb_Server.BadgeBack = Color.Green;
             lb_Server.Badge = "True";
+
+            time_listbox.Start();
         }
 
 
@@ -67,23 +62,17 @@ namespace ChatRoom
         /// <param name="e"></param>
         private void btn_Send_Click(object sender, EventArgs e)
         {
+
+            string msg = rtb_Message.Text.Trim();
+            if (string.IsNullOrEmpty(msg)) return;
+
             if (Chat.IsServerRunning)
             {
-                Chat.Send(rtb_Message.Text.Trim(), lsb_List.SelectedItem.ToString());
-                rtb_Message.Text = null;
+                Chat.Send(msg, lsb_List.SelectedItem.ToString());
+                UpdateMessage("我", msg, true);
+                rtb_Message.Clear();
             }
-
-        }
-
-
-        private void UpdateMessage(string endpoint, string msg)
-        {
-            rtb_Message.AppendText($"[{endpoint}]: {msg}\n");
-
-        }
-
-
-
+         }
 
 
         /// <summary>
@@ -121,39 +110,27 @@ namespace ChatRoom
             
         }
 
-        private void CreateMessage(string endpoint, string msg)
+
+
+
+        private void UpdateMessage(string sender, string text, bool isOwn)
         {
-            
-            AntdUI.Panel panel = new AntdUI.Panel()
-            {
-                Left = 50,Top = 50,
-            };
-            Avatar avatar = new Avatar()
-            {
-                ImageSvg = "UserOutlined",
-                Width = 30, Height = 30,
-                Left = 0, Top = 0,
-            };
-            AntdUI.Label lb_endpoint = new AntdUI.Label()
-            {
-                Text = endpoint,
-                Left = 40,
-                Top = 0,
-            };
-            AntdUI.Label lb_msg = new AntdUI.Label()
-            {
-                Text = msg,
-                Left = 40,
-                Top = 20,
-            };
-
-            splitter1.Panel2.Controls.Add(panel);
-            panel.Controls.Add(avatar);
-            panel.Controls.Add(lb_endpoint);
-            panel.Controls.Add(lb_msg);
-
+            if (this.InvokeRequired)
+                this.Invoke(() => chatList.AddToBottom(new AntdUI.Chat.TextChatItem(
+                text,           // 消息内容
+                null,           // 头像（不需要可传 null）
+                sender          // 发送者名称
+                )));
+            else
+                chatList.AddToBottom(new AntdUI.Chat.TextChatItem(
+                    text,          
+                    null,          
+                    sender
+                ));
         }
 
 
     }
+
 }
+

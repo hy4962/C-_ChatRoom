@@ -38,6 +38,7 @@
             tb_Chat = new AntdUI.TabPage();
             splitter1 = new AntdUI.Splitter();
             lsb_List = new ListBox();
+            chatList = new AntdUI.Chat.ChatList();
             panel3 = new Panel();
             button1 = new Button();
             btn_Send = new AntdUI.Button();
@@ -109,16 +110,16 @@
             // tabs1
             // 
             tabs1.Centered = true;
+            tabs1.Controls.Add(tb_setting);
             tabs1.Controls.Add(tb_Chat);
             tabs1.Controls.Add(tb_Guide);
-            tabs1.Controls.Add(tb_setting);
             tabs1.Dock = DockStyle.Fill;
             tabs1.Location = new Point(0, 44);
             tabs1.Name = "tabs1";
             tabs1.Pages.Add(tb_Guide);
             tabs1.Pages.Add(tb_Chat);
             tabs1.Pages.Add(tb_setting);
-            tabs1.SelectedIndex = 1;
+            tabs1.SelectedIndex = 2;
             tabs1.Size = new Size(1244, 632);
             styleCard1.Border = 2;
             styleCard1.BorderActive = SystemColors.ActiveBorder;
@@ -132,7 +133,7 @@
             // tb_Chat
             // 
             tb_Chat.Controls.Add(splitter1);
-            tb_Chat.Location = new Point(0, 38);
+            tb_Chat.Location = new Point(-2488, -1188);
             tb_Chat.Name = "tb_Chat";
             tb_Chat.Size = new Size(1244, 594);
             tb_Chat.TabIndex = 1;
@@ -151,6 +152,7 @@
             // 
             // splitter1.Panel2
             // 
+            splitter1.Panel2.Controls.Add(chatList);
             splitter1.Panel2.Controls.Add(panel3);
             splitter1.Panel2.Controls.Add(rtb_Message);
             splitter1.Size = new Size(1244, 594);
@@ -165,6 +167,19 @@
             lsb_List.Name = "lsb_List";
             lsb_List.Size = new Size(258, 594);
             lsb_List.TabIndex = 1;
+            // 
+            // chatList
+            // 
+            chatList.BackBubble = Color.White;
+            chatList.BackBubbleMe = Color.Blue;
+            chatList.Dock = DockStyle.Fill;
+            chatList.ForeBubble = Color.Black;
+            chatList.ForeBubbleMe = Color.White;
+            chatList.Location = new Point(0, 0);
+            chatList.Name = "chatList";
+            chatList.Size = new Size(982, 428);
+            chatList.TabIndex = 3;
+            chatList.Text = "chatList2";
             // 
             // panel3
             // 
@@ -231,7 +246,7 @@
             // tb_setting
             // 
             tb_setting.Controls.Add(divider1);
-            tb_setting.Location = new Point(-2488, -1188);
+            tb_setting.Location = new Point(0, 38);
             tb_setting.Name = "tb_setting";
             tb_setting.Size = new Size(1244, 594);
             tb_setting.TabIndex = 2;
@@ -274,7 +289,6 @@
             btn_Start.Size = new Size(112, 34);
             btn_Start.TabIndex = 20;
             btn_Start.Text = "Start";
-            btn_Start.Click += btn_Start_Click;
             // 
             // lb_s_o_c
             // 
@@ -554,5 +568,6 @@
         private AntdUI.Button btn_Start;
         private System.Windows.Forms.Timer time_listbox;
         private Button button1;
+        private AntdUI.Chat.ChatList chatList;
     }
 }
