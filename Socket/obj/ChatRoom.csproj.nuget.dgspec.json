@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\Socket\\Socket\\ChatRoom.csproj": {}
+    "C:\\Users\\Administrator\\Desktop\\C-_ChatRoom\\Socket\\ChatRoom.csproj": {}
   },
   "projects": {
-    "D:\\C#\\Socket\\Socket\\ChatRoom.csproj": {
+    "C:\\Users\\Administrator\\Desktop\\C-_ChatRoom\\Socket\\ChatRoom.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\Socket\\Socket\\ChatRoom.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\C-_ChatRoom\\Socket\\ChatRoom.csproj",
         "projectName": "ChatRoom",
-        "projectPath": "D:\\C#\\Socket\\Socket\\ChatRoom.csproj",
+        "projectPath": "C:\\Users\\Administrator\\Desktop\\C-_ChatRoom\\Socket\\ChatRoom.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\Socket\\Socket\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\Desktop\\C-_ChatRoom\\Socket\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",

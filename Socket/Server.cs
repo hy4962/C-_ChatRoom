@@ -62,6 +62,7 @@ namespace ChatRoom
                     if (byte_message > 0)
                     {
                         string message = System.Text.Encoding.UTF8.GetString(buffer, 0, byte_message);
+                        MessageReceived?.Invoke(endPoint, message);
                     }
 
 

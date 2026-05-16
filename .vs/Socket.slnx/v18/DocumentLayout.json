@@ -1,29 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\C#\\Socket\\",
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\C-_ChatRoom\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\cilent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\cilent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|d:\\c#\\socket\\socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|c:\\users\\administrator\\desktop\\c-_chatroom\\socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|D:\\C#\\Socket\\socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|c:\\users\\administrator\\desktop\\c-_chatroom\\socket\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|c:\\users\\administrator\\desktop\\c-_chatroom\\socket\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|c:\\users\\administrator\\desktop\\c-_chatroom\\socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C8DEFC16-A982-2FA2-C804-72B98E52EB0B}|Socket\\ChatRoom.csproj|solutionrelative:socket\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -34,8 +26,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -43,6 +39,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
@@ -62,75 +62,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form1.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "D:\\C#\\Socket\\Socket\\Form1.cs",
-              "RelativeDocumentMoniker": "Socket\\Form1.cs",
-              "ToolTip": "D:\\C#\\Socket\\Socket\\Form1.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "Socket\\Form1.cs [\u8BBE\u8BA1]",
+              "DocumentIndex": 2,
+              "Title": "Chat.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\C-_ChatRoom\\Socket\\Chat.cs",
+              "RelativeDocumentMoniker": "Socket\\Chat.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\C-_ChatRoom\\Socket\\Chat.cs",
+              "RelativeToolTip": "Socket\\Chat.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwCQAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T07:18:29.502Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\C#\\Socket\\Socket\\Form1.cs",
-              "RelativeDocumentMoniker": "Socket\\Form1.cs",
-              "ToolTip": "D:\\C#\\Socket\\Socket\\Form1.cs",
-              "RelativeToolTip": "Socket\\Form1.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAgwFcAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T02:51:32.422Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Cilent.cs",
-              "DocumentMoniker": "D:\\C#\\Socket\\Socket\\Cilent.cs",
-              "RelativeDocumentMoniker": "Socket\\Cilent.cs",
-              "ToolTip": "D:\\C#\\Socket\\Socket\\Cilent.cs",
-              "RelativeToolTip": "Socket\\Cilent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T06:23:50.341Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Server.cs",
-              "DocumentMoniker": "D:\\C#\\Socket\\Socket\\Server.cs",
-              "RelativeDocumentMoniker": "Socket\\Server.cs",
-              "ToolTip": "D:\\C#\\Socket\\Socket\\Server.cs",
-              "RelativeToolTip": "Socket\\Server.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAAwD8AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T06:48:26.138Z",
+              "WhenOpened": "2026-05-16T11:35:39.794Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ConnectionManager.cs",
-              "DocumentMoniker": "D:\\C#\\Socket\\Socket\\ConnectionManager.cs",
-              "RelativeDocumentMoniker": "Socket\\ConnectionManager.cs",
-              "ToolTip": "D:\\C#\\Socket\\Socket\\ConnectionManager.cs",
-              "RelativeToolTip": "Socket\\ConnectionManager.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAUwBYAAAAxAAAAAAAAAA==",
+              "Title": "Server.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\C-_ChatRoom\\Socket\\Server.cs",
+              "RelativeDocumentMoniker": "Socket\\Server.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\C-_ChatRoom\\Socket\\Server.cs",
+              "RelativeToolTip": "Socket\\Server.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAIwEAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T06:42:06.283Z"
+              "WhenOpened": "2026-05-16T11:32:59.386Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Chat.cs",
-              "DocumentMoniker": "D:\\C#\\Socket\\Socket\\Chat.cs",
-              "RelativeDocumentMoniker": "Socket\\Chat.cs",
-              "ToolTip": "D:\\C#\\Socket\\Socket\\Chat.cs",
-              "RelativeToolTip": "Socket\\Chat.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAMAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\C-_ChatRoom\\Socket\\Form1.cs",
+              "RelativeDocumentMoniker": "Socket\\Form1.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\C-_ChatRoom\\Socket\\Form1.cs",
+              "RelativeToolTip": "Socket\\Form1.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAQwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T06:56:38.951Z"
+              "WhenOpened": "2026-05-16T11:39:59.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\C-_ChatRoom\\Socket\\Form1.cs",
+              "RelativeDocumentMoniker": "Socket\\Form1.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\C-_ChatRoom\\Socket\\Form1.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "Socket\\Form1.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T11:39:56.188Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
             }
           ]
         }

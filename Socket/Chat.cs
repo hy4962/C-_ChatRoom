@@ -13,7 +13,8 @@
 
         private byte[] data;// 缓存数据的字节数组
 
-
+        // 提供给 Form1 订阅的回调
+        public event Action<string, string>? OnMessageReceived;
 
 
 
@@ -29,6 +30,14 @@
         {
             // 创建服务器实例，使用用户输入的IP地址、端口号和最大连接数
             server = new Server(ip, port, maxnum, cm);
+
+            server.MessageReceived += (endpoint, msg) =>
+            {
+                // 需要跨线程安全地传给 UI
+                OnMessageReceived?.Invoke(endpoint, msg);
+            };
+
+
             // 服务器循环监听，直到服务器被关闭
             Task.Run(new Action(() =>
             {

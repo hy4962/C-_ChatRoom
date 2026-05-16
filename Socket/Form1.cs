@@ -16,7 +16,10 @@ namespace ChatRoom
             InitializeComponent();
             Chat = new Chat(cm);
 
-
+            Chat.OnMessageReceived += (endpoint, msg) =>
+            {
+                this.Invoke(() => UpdateMessage(endpoint, msg));
+            };
 
         }
 
@@ -72,31 +75,9 @@ namespace ChatRoom
         }
 
 
-        private void UpdateMessage(string s)
+        private void UpdateMessage(string endpoint, string msg)
         {
-            if (s == "my")
-            {
-                AntdUI.Panel panel = new AntdUI.Panel()
-                {
-                    Top = 50,
-                    Left = 50,
-                };
-                AntdUI.Label label = new AntdUI.Label()
-                {
-                    Text = "这是我的消息",
-                    Top = 10,
-                    Left = 10,
-                };
-
-                
-                splitter1.Panel2.Controls.Add(panel);
-
-            }
-            if (s == "other")
-            {
-
-            }
-
+            rtb_Message.AppendText($"[{endpoint}]: {msg}\n");
 
         }
 
@@ -136,7 +117,7 @@ namespace ChatRoom
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UpdateMessage("my");
+            
         }
     }
 }

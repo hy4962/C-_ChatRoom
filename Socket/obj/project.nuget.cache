@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LUHEgvdOrEM=",
+  "dgSpecHash": "lrLFg33iQM4=",
   "success": true,
-  "projectFilePath": "D:\\C#\\Socket\\Socket\\ChatRoom.csproj",
+  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\C-_ChatRoom\\Socket\\ChatRoom.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\antdui\\2.3.12\\antdui.2.3.12.nupkg.sha512"
   ],
