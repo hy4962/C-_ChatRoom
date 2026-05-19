@@ -68,6 +68,11 @@ namespace ChatRoom
 
             if (Chat.IsServerRunning)
             {
+                if(lsb_List.SelectedItem == null)
+                {
+                    MessageBox.Show("请选择一个客户端发送消息！");
+                    return;
+                }
                 Chat.Send(msg, lsb_List.SelectedItem.ToString());
                 UpdateMessage("我", msg, true);
                 rtb_Message.Clear();
@@ -113,17 +118,9 @@ namespace ChatRoom
         private void UpdateMessage(string sender, string text, bool isOwn)
         {
             if (this.InvokeRequired)
-                this.Invoke(() => chatList.AddToBottom(new AntdUI.Chat.TextChatItem(
-                text,           // 消息内容
-                null,           // 头像（不需要可传 null）
-                sender          // 发送者名称
-                )));
+                this.Invoke(() => chatList.AddToBottom(new AntdUI.Chat.TextChatItem(text, null, sender) { Me = isOwn }));
             else
-                chatList.AddToBottom(new AntdUI.Chat.TextChatItem(
-                    text,          
-                    null,          
-                    sender
-                ));
+                chatList.AddToBottom(new AntdUI.Chat.TextChatItem(text,null,sender) { Me = isOwn });
         }
 
 
