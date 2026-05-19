@@ -84,9 +84,7 @@ namespace ChatRoom
         {
             Task.Run(new Action(() =>
             {
-                if (Chat.IsServerRunning)// 只有当服务器正在运行时才更新客户端列表
-                {
-                    if (cm.ClientList.Count > 0)// 只有当客户端列表中有连接时才更新listbox
+                    if (cm.ClientList.Count > 0)// 只有当客户端列表中有对象时才更新listbox
                     {
                         // 使用Invoke方法在UI线程上更新listbox，确保线程安全
                         lsb_List.Invoke(new Action(() =>
@@ -101,7 +99,6 @@ namespace ChatRoom
                         }));
 
                     }
-                }
             }));
         }
 
