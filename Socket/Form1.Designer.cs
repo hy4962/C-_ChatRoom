@@ -47,10 +47,6 @@
             steps1 = new AntdUI.Steps();
             tb_setting = new AntdUI.TabPage();
             divider1 = new AntdUI.Divider();
-            btn_Start = new AntdUI.Button();
-            lb_s_o_c = new AntdUI.Label();
-            rbtn_Client = new RadioButton();
-            rbtn_Server = new RadioButton();
             btn_CloseSever = new AntdUI.ButtonShadow();
             btn_CloseConnect = new AntdUI.ButtonShadow();
             label5 = new AntdUI.Label();
@@ -68,7 +64,7 @@
             tb_ServerIP = new TextBox();
             lb_ser = new AntdUI.Label();
             panel2 = new Panel();
-            lb_Cilent = new AntdUI.Label();
+            lb_Client = new AntdUI.Label();
             lb_Server = new AntdUI.Label();
             lb_状态栏 = new AntdUI.Label();
             time_listbox = new System.Windows.Forms.Timer(components);
@@ -254,10 +250,6 @@
             // 
             // divider1
             // 
-            divider1.Controls.Add(btn_Start);
-            divider1.Controls.Add(lb_s_o_c);
-            divider1.Controls.Add(rbtn_Client);
-            divider1.Controls.Add(rbtn_Server);
             divider1.Controls.Add(btn_CloseSever);
             divider1.Controls.Add(btn_CloseConnect);
             divider1.Controls.Add(label5);
@@ -281,44 +273,6 @@
             divider1.TabIndex = 3;
             divider1.Text = "分割线";
             divider1.Vertical = true;
-            // 
-            // btn_Start
-            // 
-            btn_Start.Location = new Point(563, 131);
-            btn_Start.Name = "btn_Start";
-            btn_Start.Size = new Size(112, 34);
-            btn_Start.TabIndex = 20;
-            btn_Start.Text = "Start";
-            // 
-            // lb_s_o_c
-            // 
-            lb_s_o_c.Location = new Point(563, 23);
-            lb_s_o_c.Name = "lb_s_o_c";
-            lb_s_o_c.Size = new Size(112, 34);
-            lb_s_o_c.TabIndex = 19;
-            lb_s_o_c.Text = "选择运行模式";
-            // 
-            // rbtn_Client
-            // 
-            rbtn_Client.AutoSize = true;
-            rbtn_Client.Location = new Point(576, 97);
-            rbtn_Client.Name = "rbtn_Client";
-            rbtn_Client.Size = new Size(85, 28);
-            rbtn_Client.TabIndex = 18;
-            rbtn_Client.Text = "Client";
-            rbtn_Client.UseVisualStyleBackColor = true;
-            // 
-            // rbtn_Server
-            // 
-            rbtn_Server.AutoSize = true;
-            rbtn_Server.Checked = true;
-            rbtn_Server.Location = new Point(576, 63);
-            rbtn_Server.Name = "rbtn_Server";
-            rbtn_Server.Size = new Size(88, 28);
-            rbtn_Server.TabIndex = 17;
-            rbtn_Server.TabStop = true;
-            rbtn_Server.Text = "Server";
-            rbtn_Server.UseVisualStyleBackColor = true;
             // 
             // btn_CloseSever
             // 
@@ -360,6 +314,7 @@
             btn_Connect.Size = new Size(112, 34);
             btn_Connect.TabIndex = 12;
             btn_Connect.Text = "连接服务器";
+            btn_Connect.Click += btn_Connect_Click;
             // 
             // tb_CilentPort
             // 
@@ -452,7 +407,7 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(lb_Cilent);
+            panel2.Controls.Add(lb_Client);
             panel2.Controls.Add(lb_Server);
             panel2.Controls.Add(lb_状态栏);
             panel2.Dock = DockStyle.Bottom;
@@ -461,17 +416,17 @@
             panel2.Size = new Size(1244, 34);
             panel2.TabIndex = 4;
             // 
-            // lb_Cilent
+            // lb_Client
             // 
-            lb_Cilent.Badge = "False";
-            lb_Cilent.BadgeAlign = AntdUI.TAlign.Right;
-            lb_Cilent.BadgeBack = Color.Red;
-            lb_Cilent.Dock = DockStyle.Left;
-            lb_Cilent.Location = new Point(176, 0);
-            lb_Cilent.Name = "lb_Cilent";
-            lb_Cilent.Size = new Size(92, 34);
-            lb_Cilent.TabIndex = 2;
-            lb_Cilent.Text = "客户端";
+            lb_Client.Badge = "False";
+            lb_Client.BadgeAlign = AntdUI.TAlign.Right;
+            lb_Client.BadgeBack = Color.Red;
+            lb_Client.Dock = DockStyle.Left;
+            lb_Client.Location = new Point(176, 0);
+            lb_Client.Name = "lb_Client";
+            lb_Client.Size = new Size(92, 34);
+            lb_Client.TabIndex = 2;
+            lb_Client.Text = "客户端";
             // 
             // lb_Server
             // 
@@ -558,14 +513,10 @@
         private AntdUI.ButtonShadow btn_CloseSever;
         private Panel panel2;
         private AntdUI.Label lb_状态栏;
-        private AntdUI.Label lb_Cilent;
+        private AntdUI.Label lb_Client;
         private Panel panel3;
         private AntdUI.Chat.ChatList chatList1;
         private ListBox lsb_List;
-        private AntdUI.Label lb_s_o_c;
-        private RadioButton rbtn_Client;
-        private RadioButton rbtn_Server;
-        private AntdUI.Button btn_Start;
         private System.Windows.Forms.Timer time_listbox;
         private Button button1;
         private AntdUI.Chat.ChatList chatList;

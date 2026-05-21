@@ -19,7 +19,7 @@ namespace ChatRoom
 
             Chat.OnMessageReceived += (endpoint, msg) =>
             {
-                this.Invoke(() => UpdateMessage(endpoint, msg,false));
+                this.Invoke(() => UpdateMessage(endpoint.ToString(), msg, false));
             };
 
         }
@@ -66,18 +66,21 @@ namespace ChatRoom
             string msg = rtb_Message.Text.Trim();
             if (string.IsNullOrEmpty(msg)) return;
 
-            if (Chat.IsServerRunning)
+
+
+            if (lsb_List.SelectedItem == null || lsb_List.Items == null)
             {
-                if(lsb_List.SelectedItem == null)
-                {
-                    MessageBox.Show("请选择一个客户端发送消息！");
-                    return;
-                }
+                MessageBox.Show("请选择一个终端发送消息！");
+                return;
+            }
+            else
+            {
                 Chat.Send(msg, lsb_List.SelectedItem.ToString());
                 UpdateMessage("我", msg, true);
                 rtb_Message.Clear();
             }
-         }
+
+        }
 
 
         /// <summary>
@@ -89,41 +92,65 @@ namespace ChatRoom
         {
             Task.Run(new Action(() =>
             {
-                    if (cm.ClientList.Count > 0)// 只有当客户端列表中有对象时才更新listbox
+                if (cm.ClientList.Count > 0||cm.ServerList.Count>0)// 只有当客户端列表中有对象时才更新listbox
+                {
+                    // 使用Invoke方法在UI线程上更新listbox，确保线程安全
+                    lsb_List.Invoke(new Action(() =>
                     {
-                        // 使用Invoke方法在UI线程上更新listbox，确保线程安全
-                        lsb_List.Invoke(new Action(() =>
+                        object SelectedItem = lsb_List.SelectedItem;// 记录当前选中的项，以便更新后重新选中
+                        lsb_List.Items.Clear();
+                        foreach (var item in cm.ClientList)
                         {
-                            object SelectedItem = lsb_List.SelectedItem;// 记录当前选中的项，以便更新后重新选中
-                            lsb_List.Items.Clear();
-                            foreach (var item in cm.ClientList)
-                            {
-                                lsb_List.Items.Add(item.Key);
-                            }
-                            lsb_List.SelectedItem = SelectedItem;// 更新后重新选中之前选中的项
-                        }));
+                            lsb_List.Items.Add($"客户端:{item.Key}");
+                        }
+                        foreach (var item in cm.ServerList)
+                        {
+                            lsb_List.Items.Add($"服务端:{item.Key}");
+                        }
+                        lsb_List.SelectedItem = SelectedItem;// 更新后重新选中之前选中的项
+                    }));
 
-                    }
+                }
             }));
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
 
 
-
+        /// <summary>
+        /// 更新消息气泡
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="text"></param>
+        /// <param name="isOwn"></param>
         private void UpdateMessage(string sender, string text, bool isOwn)
         {
             if (this.InvokeRequired)
                 this.Invoke(() => chatList.AddToBottom(new AntdUI.Chat.TextChatItem(text, null, sender) { Me = isOwn }));
             else
-                chatList.AddToBottom(new AntdUI.Chat.TextChatItem(text,null,sender) { Me = isOwn });
+                chatList.AddToBottom(new AntdUI.Chat.TextChatItem(text, null, sender) { Me = isOwn });
         }
 
 
+
+        /// <summary>
+        /// 连接到服务器
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_Connect_Click(object sender, EventArgs e)
+        {
+            Chat.ConnectServer(tb_CilentIP.Text.Trim(), tb_CilentPort.Text.Trim());
+            lb_Client.BadgeBack = Color.Green;
+            lb_Client.Badge = "True";
+
+            time_listbox.Start();
+        }
     }
 
 }

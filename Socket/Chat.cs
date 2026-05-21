@@ -1,12 +1,16 @@
-﻿namespace ChatRoom
+﻿using System.Net;
+using System.Security.Cryptography;
+
+namespace ChatRoom
 {
     internal class Chat
     {
-        private Cilent cilent;
+        private Client client;
         private Server server;
         private ConnectionManager cm;
 
         private bool isServerRunning = false; // 服务器是否正在运行的标志
+        private bool isClientConnected = false; // 客户端是否已连接的标志
 
         public bool IsServerRunning { get => isServerRunning; }
 
@@ -14,8 +18,7 @@
         private byte[] data;// 缓存数据的字节数组
 
         // 提供给 Form1 订阅的回调
-        public event Action<string, string>? OnMessageReceived;
-
+        public event Action<EndPoint, string>? OnMessageReceived;
 
 
         public Chat(ConnectionManager cm) { this.cm = cm; }
@@ -56,16 +59,49 @@
         }
 
 
-        public void Send(string message,string client)
+        public void Send(string message, string ip_port)
         {
-            data = System.Text.Encoding.ASCII.GetBytes(message);
-            if (server != null)
+            data = System.Text.Encoding.UTF8.GetBytes(message);
+            EndPoint endPoint = new IPEndPoint(IPAddress.Parse(ip_port.Split(':')[1]), int.Parse(ip_port.Split(':')[2]));
+
+
+            foreach (var item in cm.ServerList)
             {
-                server.Send(message,client);
+                if (item.Key.Equals(endPoint))
+                {
+                    item.Value.Send(data);
+                    return;
+                }
+            }
+
+            foreach (var item in cm.ClientList)
+            {
+                if (item.Key.Equals(endPoint))
+                {
+                    item.Value.Send(data);
+                    return;
+                }
             }
         }
 
+        /// <summary>
+        /// 客户端连接至服务端
+        /// </summary>
+        /// <param name="ip"></param>
+        /// <param name="port"></param>
+        public void ConnectServer(string ip, string port)
+        {
+            client = new Client(ip, port, cm);
+            client.MessageReceived += (endpoint, msg) =>
+            {
+                // 需要跨线程安全地传给 UI
+                OnMessageReceived?.Invoke(endpoint, msg);
+            };
 
+            isClientConnected = true;
+
+
+        }
 
 
 
